@@ -1,0 +1,12 @@
+name: Postman Auto Test on Push
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@main
+      - name: Show current path
+        run: pwd
+      - name: test newman
+        run: newman -v
