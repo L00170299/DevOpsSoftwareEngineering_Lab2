@@ -10,3 +10,5 @@ jobs:
         run: pwd
       - name: test newman
         run: newman -v
+      - name: run test with newman
+        run: newman run PostmanEcho.postman_collection.json
